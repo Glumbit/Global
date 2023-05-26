@@ -14,41 +14,199 @@
 
 <body>
 	<div class="perspective">
-		<header class="header">
-			<div class="logo"><img class="logo__img logo__img-header" src="assets/img/index/header/logo.png"
-					alt="">global</div>
-			<button class="burger">
-				<div class="burger__line"></div>
-				<div class="burger__line"></div>
-				<div class="burger__line"></div>
-			</button>
-		</header>
-		<main class="main">
-			<aside class="aside">
-				<div class="aside__point aside__point--active">
-					<p class="aside__number">01</p>
-					<p class="aside__name"> Home</p>
+		<div class="perspective__inner">
+			<header class="header">
+				<div class="logo"><img class="logo__img logo__img-header" src="assets/img/index/header/logo.png"
+						alt="">global</div>
+				<button class="burger">
+					<div class="burger__line"></div>
+					<div class="burger__line"></div>
+					<div class="burger__line"></div>
+				</button>
+			</header>
+			<main class="main">
+				<aside class="aside">
+					<div class="aside__point aside__point--active" sectionTarget="intro">
+						<p class="aside__number">01</p>
+						<p class="aside__name"> Home</p>
+					</div>
+					<div class="aside__point" sectionTarget="works">
+						<p class="aside__number">02</p>
+						<p class="aside__name">Works</p>
+					</div>
+					<div class="aside__point" sectionTarget="about">
+						<p class="aside__number">03</p>
+						<p class="aside__name">About</p>
+					</div>
+					<div class="aside__point" sectionTarget="contact">
+						<p class="aside__number">04</p>
+						<p class="aside__name">Contact</p>
+					</div>
+					<div class="aside__point" sectionTarget="hire">
+						<p class="aside__number">05</p>
+						<p class="aside__name">Hire us</p>
+					</div>
+				</aside>
+				<div class="content">
+					<section class="section section--active" sectionName="intro">
+						<div class="intro">
+							<div class="intro__banner">
+								<h1 class="title title-intro">Your next <br>interactive <br> expirience</h1>
+							</div>
+							<div class="cards">
+								<div class="cards__item">
+									<p class="card__title-intro">Metiew & Smith</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+								<div class="cards__item">
+									<p class="card__title-intro">Fantasy interactive</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+								<div class="cards__item">
+									<p class="card__title-intro">Paul & shark</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section" sectionName="works">
+						<div class="works">
+							<h2 class="title-works">Selected work</h2>
+							<div class="slider slider-works">
+								<div class="slider__items slider__items-works">
+									<div class="slider__item slider__item-works">
+										<div class="works__img">
+											<img src="assets/img/index/works/workImg1.jpg" alt="" class="works__img">
+										</div>
+										<div class="slider__data">
+											<p class="slider__title">Victiry</p>
+											<p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit sed do.</p>
+										</div>
+									</div>
+									<div class="slider__item slider__item-works">
+										<div class="works__img">
+											<img src="assets/img/index/works/workImg2.jpg" alt="" class="works__img">
+										</div>
+										<div class="slider__data">
+											<p class="slider__title">metiew & smith</p>
+											<p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit sed do.</p>
+										</div>
+									</div>
+									<div class="slider__item slider__item-works">
+										<div class="works__img">
+											<img src="assets/img/index/works/workImg3.jpg" alt="" class="works__img">
+										</div>
+										<div class="slider__data">
+											<p class="slider__title">alex nowak</p>
+											<p class="slider__text">Lorem ipsum dolor sit amet, consectetur adipisicing
+												elit sed do.</p>
+										</div>
+									</div>
+								</div>
+								<div class="slider__control slider__control-works">
+									<div class="slider__arrow" sliderDirection="prev">
+										<svg>
+											<use xlink:href="assets/svg/about.svg#arrow"></use>
+										</svg>
+									</div>
+									<div class="slider__arrow" sliderDirection="next">
+										<svg>
+											<use xlink:href="assets/svg/about.svg#arrow"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section" sectionName="about">
+						<div class="intro">
+							<div class="intro__banner">
+								<h1 class="title title-intro">Your next <br>interactive <br> expirience</h1>
+							</div>
+							<div class="cards">
+								<div class="cards__item">
+									<p class="card__title-intro">Metiew & Smith</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+								<div class="cards__item">
+									<p class="card__title-intro">Fantasy interactive</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+								<div class="cards__item">
+									<p class="card__title-intro">Paul & shark</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section" sectionName="contact">
+						<div class="intro">
+							<div class="intro__banner">
+								<h1 class="title title-intro">Your next <br>interactive <br> expirience</h1>
+							</div>
+							<div class="cards">
+								<div class="cards__item">
+									<p class="card__title-intro">Metiew & Smith</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+								<div class="cards__item">
+									<p class="card__title-intro">Fantasy interactive</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+								<div class="cards__item">
+									<p class="card__title-intro">Paul & shark</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section" sectionName="hire">
+						<div class="intro">
+							<div class="intro__banner">
+								<h1 class="title title-intro">Your next <br>interactive <br> expirience</h1>
+							</div>
+							<div class="cards">
+								<div class="cards__item">
+									<p class="card__title-intro">Metiew & Smith</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+								<div class="cards__item">
+									<p class="card__title-intro">Fantasy interactive</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+								<div class="cards__item">
+									<p class="card__title-intro">Paul & shark</p>
+									<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+										provident.</p>
+								</div>
+							</div>
+						</div>
+					</section>
 				</div>
-				<div class="aside__point">
-					<p class="aside__number">02</p>
-					<p class="aside__name"></p>
-				</div>
-				<div class="aside__point">
-					<p class="aside__number">03</p>
-					<p class="aside__name"></p>
-				</div>
-				<div class="aside__point">
-					<p class="aside__number">04</p>
-					<p class="aside__name"></p>
-				</div>
-				<div class="aside__point">
-					<p class="aside__number">05</p>
-					<p class="aside__name"></p>
-				</div>
-			</aside>
-		</main>
+			</main>
+		</div>
+		<div class="outer__nav">
+			<a class="nav__item nav__item--active" sectionTarget="intro">Home</a>
+			<a class="nav__item" sectionTarget="works">Works</a>
+			<a class="nav__item" sectionTarget="about">About</a>
+			<a class="nav__item" sectionTarget="contact">Contact</a>
+			<a class="nav__item" sectionTarget="hire">Hire us</a>
+		</div>
 	</div>
-	<div class="outer__nav"></div>
+
 	<script src="assets/js/index.js"></script>
 </body>
 

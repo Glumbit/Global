@@ -1,0 +1,8 @@
+<svg>
+	<symbol id="arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		<g>
+			<path
+				d="M12 19V5M12 5L6 11M12 5L18 11"/>
+		</g>
+	</symbol>
+</svg>
