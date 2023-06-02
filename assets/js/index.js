@@ -23,6 +23,31 @@ document.addEventListener('click', (e) => {
 })
 
 window.addEventListener("wheel", move);
+document.addEventListener("touchstart", touchStart);
+// document.addEventListener("touchmove", touchEnd);
+
+// setTimeout(() => { document.addEventListener("touchmove", touchEnd); }, 1000)
+
+let touchDirection = 0;
+
+function touchStart(event) {
+	console.log(event.touches[0].clientY);
+	touchDirection = event.touches[0].clientY;
+
+	document.addEventListener("touchmove", touchEnd);
+}
+
+function touchEnd(event) {
+	console.log(event.touches[0].clientY);
+	if (touchDirection > event.touches[0].clientY) {
+		moveDirection(1)
+	}
+	else {
+		moveDirection(-1)
+	}
+	document.removeEventListener("touchmove", touchEnd);
+	setTimeout(() => { document.addEventListener("touchmove", touchEnd); }, 10000)
+}
 
 function move(event) {
 	moveDirection(event.deltaY)
@@ -33,12 +58,20 @@ function move(event) {
 function moveDirection(direction) {
 	let sectionActive = document.querySelector('.section--active');
 	if (direction > 0) {
-		if (sectionActive.nextElementSibling === null) return;
+		if (sectionActive.nextElementSibling === null) {
+			moveSection(sectionActive.closest(".content").firstElementChild)
+			moveLinks(sectionActive.closest(".content").firstElementChild.getAttribute("sectionName"))
+			return;
+		}
 		moveSection(sectionActive.nextElementSibling)
 		moveLinks(sectionActive.nextElementSibling.getAttribute("sectionName"))
 	}
 	else {
-		if (sectionActive.previousElementSibling === null) return;
+		if (sectionActive.previousElementSibling === null) {
+			moveSection(sectionActive.closest(".content").lastElementChild)
+			moveLinks(sectionActive.closest(".content").lastElementChild.getAttribute("sectionName"))
+			return;
+		}
 		moveSection(sectionActive.previousElementSibling)
 		moveLinks(sectionActive.previousElementSibling.getAttribute("sectionName"))
 	}
@@ -100,5 +133,23 @@ function moveSlider(direction, event) {
 		const firstItem = document.querySelector('.slider__items-works').lastElementChild;
 		firstItem.remove();
 		document.querySelector('.slider__items-works').prepend(firstItem)
+	}
+}
+
+const inputs = document.querySelectorAll('.form__input-hire');
+for (const key in inputs) {
+	if (Object.hasOwnProperty.call(inputs, key)) {
+		const input = inputs[key];
+		labelShow(input)
+		input.addEventListener("input", labelShow.bind(null, input));
+	}
+}
+
+function labelShow(target, event) {
+	if (target.value) {
+		target.classList.remove("form__input-hire--empty");
+	}
+	else {
+		target.classList.add("form__input-hire--empty");
 	}
 }

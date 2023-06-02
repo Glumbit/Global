@@ -64,4 +64,13 @@ button {
   background: none;
   color: inherit;
   cursor: pointer;
+}
+
+input {
+  background: transparent;
+  color: inherit;
+  border: 0;
+}
+input:focus {
+  outline: 0;
 }/*# sourceMappingURL=reboot.css.map */

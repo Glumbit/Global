@@ -31,4 +31,14 @@
 
 .cards {
   display: flex;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100%;
 }/*# sourceMappingURL=common.css.map */
