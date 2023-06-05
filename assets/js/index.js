@@ -24,21 +24,16 @@ document.addEventListener('click', (e) => {
 
 window.addEventListener("wheel", move);
 document.addEventListener("touchstart", touchStart);
-// document.addEventListener("touchmove", touchEnd);
-
-// setTimeout(() => { document.addEventListener("touchmove", touchEnd); }, 1000)
 
 let touchDirection = 0;
 
 function touchStart(event) {
-	console.log(event.touches[0].clientY);
 	touchDirection = event.touches[0].clientY;
 
 	document.addEventListener("touchmove", touchEnd);
 }
 
 function touchEnd(event) {
-	console.log(event.touches[0].clientY);
 	if (touchDirection > event.touches[0].clientY) {
 		moveDirection(1)
 	}
@@ -77,9 +72,9 @@ function moveDirection(direction) {
 	}
 }
 
-function moveSection(to) {
+function moveSection(destination) {
 	document.querySelector('.section--active').classList.remove('section--active');
-	to.classList.add('section--active');
+	destination.classList.add('section--active');
 }
 
 function moveLinks(sectionName) {
@@ -87,8 +82,11 @@ function moveLinks(sectionName) {
 	const asideLink = document.querySelector(`.aside__point[sectionTarget=${sectionName}]`);
 	const navLink = document.querySelector(`.nav__item[sectionTarget=${sectionName}]`);
 
-	document.querySelector('.aside__point--active').classList.remove('aside__point--active');
-	document.querySelector('.nav__item--active').classList.remove('nav__item--active');
+	const asideActive = document.querySelector('.aside__point--active');
+	const navActive = document.querySelector('.nav__item--active');
+
+	asideActive.classList.remove('aside__point--active');
+	navActive.classList.remove('nav__item--active');
 
 	asideLink.classList.add('aside__point--active')
 	navLink.classList.add('nav__item--active')
